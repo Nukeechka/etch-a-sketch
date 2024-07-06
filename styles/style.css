@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #eee;
+  /* width: 1200px;
+  margin: 0 auto; */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+}
+
+.box.hovered {
+  background-color: #222;
+}
+
+.btn {
+  border-radius: 0px;
+  border: none;
+  background-color: indigo;
+  color: yellow;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 100%;
+}
