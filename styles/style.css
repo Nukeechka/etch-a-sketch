@@ -16,7 +16,7 @@ body {
 }
 
 .box.hovered {
-  background-color: #222;
+  /* opacity: 1; */
 }
 
 .btn {

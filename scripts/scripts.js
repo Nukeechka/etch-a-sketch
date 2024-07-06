@@ -21,7 +21,21 @@ window.onload = function startSketch() {
     const boxes = document.querySelectorAll(".box");
     boxes.forEach((box) => {
       box.addEventListener("mouseover", () => {
-        box.classList.add("hovered");
+        if (!box.classList.contains("hovered")) {
+          box.classList.add("hovered");
+          let colorArr = [];
+          for (let i = 0; i < 3; i++) {
+            let randomNumber = Math.floor(Math.random() * 256);
+            colorArr[i] = randomNumber;
+          }
+          box.style.backgroundColor = `rgb(${colorArr[0]}, ${colorArr[1]}, ${colorArr[2]}) `;
+          box.style.opacity = "0.1";
+        }
+        if (box.style.opacity <= "1") {
+          let newOpacity = parseFloat(box.style.opacity) + 0.1;
+          box.style.opacity = newOpacity.toString();
+          // console.log(newOpacity);
+        }
       });
     });
   }
